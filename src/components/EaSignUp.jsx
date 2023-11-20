@@ -14,19 +14,37 @@ const SignUp = () => {
     const navigate = useNavigate();
 
 
-    const handleSubmit = (e)=> {
-        e.preventDefault()
-        Axios.post('http://localhost:3001/register', {
-            name: name, 
-            email: email, 
-            password: password
-        })
-        .then(result=> {console.log(result)
-        navigate('/login')
-        })
     
-        .catch(err=> console.log(err))
-    }
+    const handleSubmit = (e)=> {
+      e.preventDefault()
+      Axios.post('http://chinese-happy-hour.vercel.app/register', {
+          name: name, 
+          email: email, 
+          password: password
+      })
+      .then(result=> {console.log(result)
+      navigate('/login')
+      })
+  
+      .catch(err=> console.log(err))
+
+
+        
+
+    
+    // const handleSubmit = (e)=> {
+    //     e.preventDefault()
+    //     Axios.post('http://localhost:3001/register', {
+    //         name: name, 
+    //         email: email, 
+    //         password: password
+    //     })
+    //     .then(result=> {console.log(result)
+    //     navigate('/login')
+    //     })
+    
+    //     .catch(err=> console.log(err))
+    // }
 
 
     return(
