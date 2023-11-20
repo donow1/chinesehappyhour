@@ -14,7 +14,7 @@ const Login = () => {
 
   const handleSubmit = (e)=> {
     e.preventDefault()
-    Axios.post('https://chinese-happy-hour.vercel.app/login', {
+    Axios.post('https://chinese-happy-hour.vercel.app:3001/login', {
         email: email, 
         password: password
     })
