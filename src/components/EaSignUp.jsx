@@ -14,24 +14,6 @@ const SignUp = () => {
     const navigate = useNavigate();
 
 
-    
-    // const handleSubmit = (e)=> {
-    //   e.preventDefault()
-    //   Axios.post('https://chinese-happy-hour-git-main-donow1s-projects.vercel.app/register', {
-    //       name: name, 
-    //       email: email, 
-    //       password: password
-    //   })
-    //   .then(result=> {console.log(result)
-    //   navigate('/login')
-    //   })
-  
-    //   .catch(err=> console.log(err))
-
-
-        
-
-    
     const handleSubmit = (e)=> {
         e.preventDefault()
         Axios.post('http://localhost:3001/register', {
@@ -42,13 +24,11 @@ const SignUp = () => {
         .then(result=> {console.log(result)
         navigate('/login')
         })
-    
         .catch(err=> console.log(err))
     }
 
 
     return(
-
         <div className="bg-gray-100 flex flex-col items-center justify-center min-h-screen md:py-2" id='ESignUpOrLogin'>
         <main className="flex items-center w-full px-2 md:px-20">
           <div className="hidden md:inline-flex flex-col flex-1 space-y-1">
