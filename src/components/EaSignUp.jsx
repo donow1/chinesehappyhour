@@ -15,36 +15,36 @@ const SignUp = () => {
 
 
     
-    const handleSubmit = (e)=> {
-      e.preventDefault()
-      Axios.post('https://chinese-happy-hour-git-main-donow1s-projects.vercel.app/register', {
-          name: name, 
-          email: email, 
-          password: password
-      })
-      .then(result=> {console.log(result)
-      navigate('/login')
-      })
+    // const handleSubmit = (e)=> {
+    //   e.preventDefault()
+    //   Axios.post('https://chinese-happy-hour-git-main-donow1s-projects.vercel.app/register', {
+    //       name: name, 
+    //       email: email, 
+    //       password: password
+    //   })
+    //   .then(result=> {console.log(result)
+    //   navigate('/login')
+    //   })
   
-      .catch(err=> console.log(err))
+    //   .catch(err=> console.log(err))
 
 
         
 
     
-    // const handleSubmit = (e)=> {
-    //     e.preventDefault()
-    //     Axios.post('http://localhost:3001/register', {
-    //         name: name, 
-    //         email: email, 
-    //         password: password
-    //     })
-    //     .then(result=> {console.log(result)
-    //     navigate('/login')
-    //     })
+    const handleSubmit = (e)=> {
+        e.preventDefault()
+        Axios.post('http://localhost:3001/register', {
+            name: name, 
+            email: email, 
+            password: password
+        })
+        .then(result=> {console.log(result)
+        navigate('/login')
+        })
     
-    //     .catch(err=> console.log(err))
-    // }
+        .catch(err=> console.log(err))
+    }
 
 
     return(
