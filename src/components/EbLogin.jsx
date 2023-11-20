@@ -12,24 +12,9 @@ const Login = () => {
   const navigate = useNavigate();
 
 
-  const handleSubmit = (e)=> {
-    e.preventDefault()
-    Axios.post('https://chinese-happy-hour.vercel.app:3001/login', {
-        email: email, 
-        password: password
-    })
-    .then(result=> {console.log(result)
-      if (result.data === "Success") {
-        navigate("/resource")
-      }
-    })
-    .catch(err=> console.log(err))
-}
-
-
 //   const handleSubmit = (e)=> {
 //     e.preventDefault()
-//     Axios.post('http://localhost:3001/login', {
+//     Axios.post('https://chinese-happy-hour.vercel.app:3001/login', {
 //         email: email, 
 //         password: password
 //     })
@@ -40,6 +25,21 @@ const Login = () => {
 //     })
 //     .catch(err=> console.log(err))
 // }
+
+
+  const handleSubmit = (e)=> {
+    e.preventDefault()
+    Axios.post('http://localhost:3001/login', {
+        email: email, 
+        password: password
+    })
+    .then(result=> {console.log(result)
+      if (result.data === "Success") {
+        navigate("/resource")
+      }
+    })
+    .catch(err=> console.log(err))
+}
 
 
 
