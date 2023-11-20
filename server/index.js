@@ -8,7 +8,14 @@ app.use(express.json())
 app.use(cors())
 
 // mongoose.connect("mongodb://127.0.0.1.27017/user");
-mongoose.connect("mongodb://localhost:27017/user");
+//mongoose.connect("mongodb://localhost:27017/user");
+mongoose.connect("mongodb+srv://ellalyang:DooYJjBIp4PXz4xw@cluster0.wq2l2kp.mongodb.net/").then(()=> {
+    console.log('DB connected')
+}).catch(()=>{
+    console.log('DB err')
+})
+
+
 
 app.post('/login', (req, res)=>{
     const {email, password} = req.body;
