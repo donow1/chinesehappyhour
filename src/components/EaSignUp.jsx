@@ -16,7 +16,7 @@ const SignUp = () => {
 
     const handleSubmit = (e)=> {
         e.preventDefault()
-        Axios.post('http://localhost:3001/register', {
+        Axios.post('https://chinese-happy-hour.vercel.app/register', {
             name: name, 
             email: email, 
             password: password
