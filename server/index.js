@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 app.use(cors(
     {
-        origin: ["https://chinese-happy-hour.vercel.app/"],
+        origin: ["https://chinese-happy-hour.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
