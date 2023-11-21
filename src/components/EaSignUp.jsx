@@ -14,6 +14,9 @@ const SignUp = () => {
     const navigate = useNavigate();
 
 
+    Axios.defaults.withCredentials = true;
+
+
     const handleSubmit = (e)=> {
         e.preventDefault()
         Axios.post('https://chinese-happy-hour.vercel.app/register', {
