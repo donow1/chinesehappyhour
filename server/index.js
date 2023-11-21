@@ -7,13 +7,30 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+
+
 // mongoose.connect("mongodb://127.0.0.1.27017/user");
-mongoose.connect("mongodb://localhost:27017/user");
+// mongoose.connect("mongodb://localhost:27017/user");
+
 // mongoose.connect("mongodb+srv://ellalyang:DooYJjBIp4PXz4xw@cluster0.wq2l2kp.mongodb.net/").then(()=> {
 //     console.log('DB connected')
 // }).catch(()=>{
 //     console.log('DB err')
 // })
+
+
+
+
+mongoose.connect("mongodb+srv://ellalyang:DooYJjBIp4PXz4xw@cluster0.wq2l2kp.mongodb.net/?retryWrites=true&w=majority").then(()=> {
+    console.log('DB connected')
+}).catch(()=>{
+    console.log('DB err')
+})
+
+// mongodb+srv://<username>:<password>@cluster0.wq2l2kp.mongodb.net/?retryWrites=true&w=majority
+
+
+
 
 
 
@@ -40,7 +57,11 @@ LearnerModel.create(req.body)
 })
 
 
+
+
 app.listen(3001, ()=> {
     console.log('server is running')
 })
+
+
 
