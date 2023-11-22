@@ -21,14 +21,14 @@ export default function App() {
         <DTextResources />
 
 
-        <BrowserRouter>
+{/*         <BrowserRouter>
           <Routes>
           <Route index element={<SignUp />}></Route>
           <Route path='register' element={<SignUp />}></Route>
           <Route path='login' element={<Login />}> </Route>
           <Route path='resource' element={<HExclusiveResources />}> </Route>
           </Routes>
-        </BrowserRouter>
+        </BrowserRouter> */}
 
 
 
